@@ -1,0 +1,1 @@
+# constructor-properties-generator-plugin
