@@ -1,35 +1,29 @@
 <idea-plugin>
     <id>pl.tndsoft.constructorplugin</id>
     <name>@ConstructorProperties generator</name>
-    <version>1.0</version>
+    <version>0.0.2</version>
     <vendor url="https://github.com/tomasz77">Tomasz Jagiełło</vendor>
 
     <description><![CDATA[
-      This is simple plugin generating @ConstructorProperty annotation with field names on at least one arg constructor.
+      This is simple plugin generating @ConstructorProperties annotation with field names on at least one arg constructor.
 
       Action visible in generate actions for class.
     ]]></description>
 
     <change-notes><![CDATA[
-      0.0.1 Initial version - Generating @ConstructorProperty for selected constructors
+      0.0.2 Initial version - Generating @ConstructorProperties for selected constructors
     ]]>
     </change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173.0"/>
+    <idea-version since-build="173.4710"/>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
         <action id="pl.tndsoft.constuctorpropertiesgenerator.InsertConstructorPropertiesAction" class="pl.tndsoft.constuctorpropertiesgenerator.InsertConstructorPropertiesAction" text="Generate @ConstructorProperties">
             <add-to-group group-id="JavaGenerateGroup1" anchor="after" relative-to-action="GenerateConstructor"/>
         </action>
