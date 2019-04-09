@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>pl.tndsoft.constructorplugin</id>
-    <name>@ConstructorProperties generator</name>
+    <name>ConstructorProperties generator</name>
     <version>0.0.2</version>
     <vendor url="https://github.com/tomasz77">Tomasz Jagiełło</vendor>
 
