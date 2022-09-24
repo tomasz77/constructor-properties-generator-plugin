@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin require-restart="false">
     <id>pl.tndsoft.constructorplugin</id>
     <name>ConstructorProperties generator</name>
     <version>0.0.2</version>
@@ -11,11 +11,14 @@
     ]]></description>
 
     <change-notes><![CDATA[
+    <p>
       0.0.2 Initial version - Generating @ConstructorProperties for selected constructors
+    </p>
+    <p>
+      0.0.5 Added 'Update @ConstructorProperties' action
+    </p>
     ]]>
     </change-notes>
-
-    <idea-version since-build="173.4710"/>
 
     <depends>com.intellij.modules.java</depends>
 
@@ -25,6 +28,9 @@
 
     <actions>
         <action id="pl.tndsoft.constuctorpropertiesgenerator.InsertConstructorPropertiesAction" class="pl.tndsoft.constuctorpropertiesgenerator.InsertConstructorPropertiesAction" text="Generate @ConstructorProperties">
+            <add-to-group group-id="JavaGenerateGroup1" anchor="after" relative-to-action="GenerateConstructor"/>
+        </action>
+        <action id="pl.tndsoft.constuctorpropertiesgenerator.UpdateConstructorPropertiesAction" class="pl.tndsoft.constuctorpropertiesgenerator.UpdateConstructorPropertiesAction" text="Update @ConstructorProperties">
             <add-to-group group-id="JavaGenerateGroup1" anchor="after" relative-to-action="GenerateConstructor"/>
         </action>
     </actions>
